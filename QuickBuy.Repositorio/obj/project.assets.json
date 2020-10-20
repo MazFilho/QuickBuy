@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "QuickBuy.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/QuickBuy.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuickBuy.Dominio.dll": {}
+        }
       }
     }
   },
@@ -171,11 +181,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "QuickBuy.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../QuickBuy.Dominio/QuickBuy.Dominio.csproj",
+      "msbuildProject": "../QuickBuy.Dominio/QuickBuy.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "QuickBuy.Dominio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -207,7 +223,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+              "projectPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
