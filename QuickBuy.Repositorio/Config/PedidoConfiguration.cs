@@ -41,9 +41,10 @@ namespace QuickBuy.Repositorio.Config
             builder
                 .Property(p => p.NumeroEndereco)
                 .IsRequired();
-                
 
-
+            // Abaixo configuração de mapeamento, pedido pode ter apenas um usuario, mas ja foi configurado na class UsuarioConfiguration.
+            //builder
+            //    .HasOne(p => p.Usuario);
                 
         }
     }

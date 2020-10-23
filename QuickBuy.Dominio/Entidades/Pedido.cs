@@ -13,7 +13,6 @@ namespace QuickBuy.Dominio.Entidades
         public DateTime DataPedido { get; set; }
         public int UsuarioId { get; set; }
         public virtual Usuario Usuario { get; set; }
-
         public DateTime DataPrevisaoEntrega { get; set; }
         public String CEP { get; set; }
         public String Estado { get; set; }
