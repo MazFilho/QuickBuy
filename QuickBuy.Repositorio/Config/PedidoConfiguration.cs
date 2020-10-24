@@ -45,7 +45,8 @@ namespace QuickBuy.Repositorio.Config
             // Abaixo configuração de mapeamento, pedido pode ter apenas um usuario, mas ja foi configurado na class UsuarioConfiguration.
             //builder
             //    .HasOne(p => p.Usuario);
-                
+
+            builder.HasOne(p => p.FormaPagamento);
         }
     }
 }
