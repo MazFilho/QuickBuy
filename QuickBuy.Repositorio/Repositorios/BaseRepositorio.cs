@@ -48,6 +48,7 @@ namespace QuickBuy.Repositorio.Repositorios
 
         public void Remover(TEntity entity)
         {
+            //QuickBuyContexto.Set<TEntity>().Remove(entity);
             QuickBuyContexto.Remove(entity);
             QuickBuyContexto.SaveChanges();
         }
