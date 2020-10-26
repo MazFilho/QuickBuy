@@ -9,44 +9,51 @@ namespace QuickBuy.Repositorio.Repositorios
 {
     public class BaseRepositorio<TEntity> : IBaseRepositorio<TEntity> where TEntity : class
     {
-
-
-        // Pegando a instancia (DbContext) criada pela propria infra do asp net core e armezanando internamente na classe BaseRepositorio.
-        // Conexão das classes com banco de dados, pegando as configurações de DbContext, q são configurads/referenciadas na classe Startup.
+        // Pegando a instancia (DbContext) criada pela propria infra do asp net core (configure services) e armezanando internamente na classe BaseRepositorio.
+        // Conexão das classes com banco de dados, (implementar os metodos d basereositorio) pegando as configurações de DbContext, q são configurads/referenciadas na classe Startup.
         
-        public readonly QuickBuyContexto _quickBuyContexto;
+        
+        //Armazena internamente instancia recebida da startup.cs (configure service)
+        protected readonly QuickBuyContexto QuickBuyContexto;
+        
+        //Construtor q recebe instncia de Startup.cs (Configure Service)
         public BaseRepositorio(QuickBuyContexto quickBuyContexto)
         {
-            _quickBuyContexto = quickBuyContexto;
+            QuickBuyContexto = quickBuyContexto;
         }
+
+        //Metodos
 
         public void Adicionar(TEntity entity)
         {
-            _quickBuyContexto.Set<TEntity>().Add(entity);
+            QuickBuyContexto.Set<TEntity>().Add(entity);
+            QuickBuyContexto.SaveChanges();
         }
 
         public void Atualizar(TEntity entity)
         {
-            throw new NotImplementedException();
+            QuickBuyContexto.Set<TEntity>().Update(entity);
+            QuickBuyContexto.SaveChanges();
         }
 
         public TEntity ObterPorId(int id)
         {
-            throw new NotImplementedException();
+            return QuickBuyContexto.Set<TEntity>().Find(id);
         }
 
         public IEnumerable<TEntity> ObterTodos()
         {
-            return _quickBuyContexto.Set<TEntity>().ToList();
+            return QuickBuyContexto.Set<TEntity>().ToList();
         }
 
         public void Remover(TEntity entity)
         {
-            throw new NotImplementedException();
+            QuickBuyContexto.Remove(entity);
+            QuickBuyContexto.SaveChanges();
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            QuickBuyContexto.Dispose();
         }
     }
 }
