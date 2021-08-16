@@ -8,4 +8,8 @@ import { Component } from "@angular/core"
 
 export class LoginComponent {
 
+  public email: string = "mike@teste.com";
+
+  constructor() { }
+
 }
