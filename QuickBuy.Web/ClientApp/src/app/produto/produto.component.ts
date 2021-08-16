@@ -1,8 +1,10 @@
 import { Component } from "@angular/core"
 
+
+//Decorator
 @Component({
   //selector: Tag da reinderizção
-  selector: "produto",
+  selector: "app-produto",
   //HTML reinderização
   template: "<html><body>{{ obterNome() }}</body></html>"
 })
@@ -15,6 +17,6 @@ export class ProdutoComponent {
   public liberadoParaVenda: boolean;
 
   public obterNome(): string {
-    return "Sansung";
+    return "Samsung";
   }
 }

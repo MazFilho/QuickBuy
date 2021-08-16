@@ -7,3 +7,12 @@ C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.
 C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.dll
 C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.pdb
 C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.csprojAssemblyReference.cache
+D:\Projetos\QuickBuy\QuickBuy.Dominio\bin\Debug\netstandard2.0\QuickBuy.Dominio.deps.json
+D:\Projetos\QuickBuy\QuickBuy.Dominio\bin\Debug\netstandard2.0\QuickBuy.Dominio.dll
+D:\Projetos\QuickBuy\QuickBuy.Dominio\bin\Debug\netstandard2.0\QuickBuy.Dominio.pdb
+D:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.csproj.AssemblyReference.cache
+D:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.csproj.CoreCompileInputs.cache
+D:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.AssemblyInfoInputs.cache
+D:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.AssemblyInfo.cs
+D:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.dll
+D:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\netstandard2.0\QuickBuy.Dominio.pdb

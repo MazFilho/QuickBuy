@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProdutoComponent } from './produto/produto.component'; // Importção da class ts/componente
+import { LoginComponent } from './usuario/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProdutoComponent } from './produto/produto.component'; // Importção d
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    ProdutoComponent // Declaração do coponente
+    ProdutoComponent,
+    LoginComponent // Declaração do coponente
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,7 +30,8 @@ import { ProdutoComponent } from './produto/produto.component'; // Importção d
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'produto', component: ProdutoComponent }, // Caminho da carga
+      { path: 'produto', component: ProdutoComponent },
+      { path: 'entrar', component: LoginComponent } // Caminho da carga
     ])
   ],
   providers: [],
