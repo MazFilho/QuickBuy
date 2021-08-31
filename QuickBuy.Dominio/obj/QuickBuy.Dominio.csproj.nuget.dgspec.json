@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {}
+    "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+    "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectUniqueName": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "projectName": "QuickBuy.Dominio",
-        "projectPath": "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectPath": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "packagesPath": "C:\\Users\\Mazinho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\obj\\",
+        "outputPath": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

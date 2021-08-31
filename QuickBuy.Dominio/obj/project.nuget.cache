@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EckOMYJkV2NLRijVIm+W83nKNC3mOXcdWTfMNtp7eRhISSxl/jZPKGTztBn0195psc8yQBcgmlXrFzTEUsciLA==",
+  "dgSpecHash": "PLlSNHxc2McxnBLRdqAshH2K+i4a6UDa7Ky16u1B0OFRNOLYixQIJn9H/mYMJUSIJbAuIynCPs9N9M1b+i4G/w==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+  "projectFilePath": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mazinho\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Mazinho\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

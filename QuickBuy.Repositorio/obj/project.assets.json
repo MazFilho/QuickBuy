@@ -4112,11 +4112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+      "projectUniqueName": "C:\\workspace\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
       "projectName": "QuickBuy.Repositorio",
-      "projectPath": "D:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+      "projectPath": "C:\\workspace\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
       "packagesPath": "C:\\Users\\Mazinho\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
+      "outputPath": "C:\\workspace\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4136,8 +4136,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
-              "projectPath": "D:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
+            "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+              "projectPath": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
             }
           }
         }

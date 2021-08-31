@@ -12,11 +12,12 @@ export class LoginComponent {
   public usuario: Usuario;
 
   constructor() {
-    this.usuario = new Usuario();
+   this.usuario = new Usuario();
   }
 
   public entrar(): void {
-    alert(this.usuario.email + ' - ' + this.usuario.senha);
+    if (this.usuario.email == "mike@easy.com" && this.usuario.senha == "1505") {
+    }
   }
 
 }
