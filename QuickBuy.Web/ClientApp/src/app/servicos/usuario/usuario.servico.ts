@@ -9,9 +9,31 @@ import { Usuario } from "../../modelo/usuario";
 export class UsuarioServico {
 
   private baseURL: string;
+  private _usuario: Usuario;
 
-  constructor(@Inject('BASE_URL') baseUrl: string,
-              private http: HttpClient
+  set usuario(usuario: Usuario) {
+    sessionStorage.setItem("usuario-autenticado", JSON.stringify(usuario));
+    this._usuario = usuario;
+  }
+
+  get usuario(): Usuario {
+    let usuarioJson = sessionStorage.getItem("usuario-autenticado");
+    this._usuario = JSON.parse(usuarioJson);
+    return this._usuario;
+  }
+
+  public usuarioAutenticado(): boolean {
+    return !!(this._usuario && this._usuario.email && this._usuario.senha);
+  }
+
+  public limparSessao() {
+    sessionStorage.setItem("usuario-autenticado", "");
+    this._usuario = null;
+  }
+
+  constructor(
+    @Inject('BASE_URL') baseUrl: string,
+    private http: HttpClient
   ) {
     this.baseURL = baseUrl;
    }

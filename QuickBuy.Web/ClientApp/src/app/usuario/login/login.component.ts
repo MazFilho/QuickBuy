@@ -31,11 +31,8 @@ export class LoginComponent implements OnInit {
   public entrar() {
     this.usuarioServico.verificarUsuario(this.usuario)
     .subscribe(
-      data => {
-        var usuarioRetorno: Usuario;
-        usuarioRetorno = data;
-        sessionStorage.setItem("usuario-autenticado", "1");
-        sessionStorage.setItem("email-usuario", usuarioRetorno.email);
+      usuarioJson => {
+        this.usuarioServico.usuario = usuarioJson;
 
         this.router.navigate([this.returnUrl]);
       },
