@@ -79,9 +79,17 @@
         Cadastrar
       </button>
       <div>
-        <a [routerLink]='["/entrar"]'>Voltar</a>
+        <a [routerLink]="['/entrar']">Voltar</a>
       </div>
-      <div class="alert alert-danger" *ngIf="mensagem"> {{mensagem}} </div>
+
+      <div class="alert alert-danger" *ngIf="mensagem">
+        {{mensagem}}
+      </div>
+
+      <div class="alert alert-success" *ngIf="usuarioCadastrado">
+        Usuário cadastrado com suecesso!<a class="alert-link" [routerLink]="['/entrar']">Clique aqui</a> para entrar no sistema com a sua conta. 
+      </div>
+    
       <img src="../../../assets/img/buy-logo.jpg" />
     </form>
   </div>
