@@ -1,0 +1,11 @@
+.titulo {
+    color: #666;
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Buscar";
+}
+
+.invalid-feedback {
+    display: block;
+}

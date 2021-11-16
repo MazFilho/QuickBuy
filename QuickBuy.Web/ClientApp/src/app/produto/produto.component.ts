@@ -1,4 +1,6 @@
-import { Component } from "@angular/core"
+import { Component, OnInit } from "@angular/core"
+import { Produto } from "../modelo/produto";
+import { ProdutoServico } from "../servicos/produto/produto.servico";
 
 @Component({
   selector: "app-produto",
@@ -6,12 +8,26 @@ import { Component } from "@angular/core"
   styleUrls: ["./produto.component.css"]
 })
 
-export class ProdutoComponent {
+export class ProdutoComponent implements OnInit {
 
-  public nome: string;
-  public liberadoParaVenda: boolean;
+  public produto: Produto;
 
-  public obterNome(): string[] {
-    return ["Samsung", "Apple"];
+  constructor(private produtoServico: ProdutoServico) { }
+  
+  ngOnInit(): void {
+    this.produto = new Produto();
+  }
+
+  public cadastrar() {
+    // this.produtoServico.cadastrar(this.produto)
+    // .subscribe(
+    //   produtoJson => {
+    //     console.log(produtoJson);
+    //   },
+    //   e => {
+    //     console.log(e.error);
+    //   }
+    // );
+    alert('Ok!');
   }
 }
