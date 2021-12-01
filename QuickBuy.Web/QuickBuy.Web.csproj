@@ -53,6 +53,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\usuario\cadastro\" />
+    <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

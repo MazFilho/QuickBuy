@@ -11,11 +11,24 @@ import { ProdutoServico } from "../servicos/produto/produto.servico";
 export class ProdutoComponent implements OnInit {
 
   public produto: Produto;
+  public arquivoSelecionado: File;
 
   constructor(private produtoServico: ProdutoServico) { }
   
   ngOnInit(): void {
     this.produto = new Produto();
+  }
+
+  public inputChange(files: FileList) {
+    this.arquivoSelecionado = files.item(0);
+    this.produtoServico.enviarArquivo(this.arquivoSelecionado)
+    .subscribe(
+      retorno => {
+        console.log(retorno);
+      },
+      e => {
+        console.log(e.error);
+      }); 
   }
 
   public cadastrar() {
