@@ -10,6 +10,7 @@ namespace QuickBuy.Dominio.Entidades
         public String Nome { get; set; }
         public String Descricao { get; set; }
         public decimal Preco { get; set; }
+        public string NomeArquivo { get; set; }
 
         public override void Validate()
         {
@@ -21,7 +22,6 @@ namespace QuickBuy.Dominio.Entidades
 
             if (Preco == 0)
                 AdicionarCritica("Preço do produto não foi informado.");
-
         }
     }
 }

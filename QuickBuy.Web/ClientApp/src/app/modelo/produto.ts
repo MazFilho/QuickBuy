@@ -1,5 +1,7 @@
 export class Produto {
-    nome: string;
-    descricao: string;
-    preco: any;
+  id: number;
+  nome: string;
+  descricao: string;
+  preco: number;
+  nomeArquivo: string;
 }

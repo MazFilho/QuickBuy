@@ -1,46 +1,51 @@
-import { Component, OnInit } from "@angular/core"
+import { Component, OnInit } from "@angular/core";
 import { Produto } from "../modelo/produto";
 import { ProdutoServico } from "../servicos/produto/produto.servico";
+import { finalize } from "rxjs/operators";
 
 @Component({
   selector: "app-produto",
   templateUrl: "./produto.component.html",
-  styleUrls: ["./produto.component.css"]
+  styleUrls: ["./produto.component.css"],
 })
-
 export class ProdutoComponent implements OnInit {
-
   public produto: Produto;
   public arquivoSelecionado: File;
+  public ativar_spinner: boolean;
+  public mensagem: string;
 
-  constructor(private produtoServico: ProdutoServico) { }
-  
+  constructor(private produtoServico: ProdutoServico) {}
+
   ngOnInit(): void {
     this.produto = new Produto();
   }
 
   public inputChange(files: FileList) {
     this.arquivoSelecionado = files.item(0);
-    this.produtoServico.enviarArquivo(this.arquivoSelecionado)
-    .subscribe(
-      retorno => {
-        console.log(retorno);
-      },
-      e => {
-        console.log(e.error);
-      }); 
+    this.ativar_spinner = true;
+    this.produtoServico
+      .enviarArquivo(this.arquivoSelecionado)
+      .subscribe(
+        (nomeArquivo) => {
+          this.produto.nomeArquivo = nomeArquivo;
+          this.ativar_spinner = false;
+        },
+        (e) => {
+          console.log(e.error);
+          this.ativar_spinner = false;
+        }
+      );
   }
 
   public cadastrar() {
-    // this.produtoServico.cadastrar(this.produto)
-    // .subscribe(
-    //   produtoJson => {
-    //     console.log(produtoJson);
-    //   },
-    //   e => {
-    //     console.log(e.error);
-    //   }
-    // );
-    alert('Ok!');
+    this.produtoServico.cadastrar(this.produto)
+    .subscribe(
+      produtoJson => {
+        console.log(produtoJson);
+      },
+      e => {
+        this.mensagem = e.error;
+      }
+    );
   }
 }

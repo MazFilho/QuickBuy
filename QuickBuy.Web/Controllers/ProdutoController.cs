@@ -47,8 +47,14 @@ namespace QuickBuy.Web.Controllers
         }
         
         [HttpPost]
-        public IActionResult Post([FromBody]Produto produto)
+        public IActionResult Post([FromBody] Produto produto)
         {
+            produto.Validate();
+            if (!produto.EhValido)
+            {
+                return BadRequest(produto.ObterMensagensValidacao());
+            }
+
             try
             {
                 _produtoRepositorio.Adicionar(produto);
@@ -69,8 +75,7 @@ namespace QuickBuy.Web.Controllers
                 var formFile = _httpContextAccessor.HttpContext.Request.Form.Files["arquivoEnviado"];
                 var nomeArquivo = formFile.FileName;
                 var extensao = nomeArquivo.Split(".").Last();
-                var arrayNomeCompacto = Path.GetFileNameWithoutExtension(nomeArquivo).Take(10).ToArray();
-                var novoNomeArquivo = new string(arrayNomeCompacto).Replace(" ", "-") + "." + extensao;
+                string novoNomeArquivo = GerarNovoNomeArquivo(nomeArquivo, extensao);
                 var folderFiles = _hostingEnvironment.WebRootPath + "\\Files\\";
                 var nomeCompleto = folderFiles + novoNomeArquivo;
 
@@ -79,14 +84,22 @@ namespace QuickBuy.Web.Controllers
                     formFile.CopyTo(streamArquivo);
                 }
 
-                return Ok("Arquivo enviado com sucesso");
+                return Json(novoNomeArquivo);
 
 
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
         }
 
+        private static string GerarNovoNomeArquivo(string nomeArquivo, string extensao)
+        {
+            var arrayNomeCompacto = Path.GetFileNameWithoutExtension(nomeArquivo).Take(10).ToArray();
+            var novoNomeArquivo = new string(arrayNomeCompacto).Replace(" ", "-");
+            novoNomeArquivo = $"{novoNomeArquivo}_{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}.{extensao}";
+            return novoNomeArquivo;
+        }
     }
 }

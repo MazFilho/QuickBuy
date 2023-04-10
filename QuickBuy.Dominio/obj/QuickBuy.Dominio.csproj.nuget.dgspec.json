@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "projectName": "QuickBuy.Dominio",
         "projectPath": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Mazinho\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\mazin\\.nuget\\packages\\",
         "outputPath": "C:\\workspace\\QuickBuy\\QuickBuy.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mazinho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mazin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
